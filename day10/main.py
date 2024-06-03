@@ -1,5 +1,4 @@
 import dataclasses
-import itertools
 from typing import Iterator
 
 
@@ -52,16 +51,7 @@ def run(input: str) -> Iterator[tuple[int, int]]:
 
 
 def part1(input: str) -> int:
-    ticks = itertools.chain([20], itertools.count(60, 40))
-
-    sum_signal_strength, tick = 0, next(ticks)
-
-    for cycles, x in run(input):
-        if cycles == tick:
-            sum_signal_strength += cycles * x
-            tick = next(ticks)
-
-    return sum_signal_strength
+    return sum(cycles * x for cycles, x in run(input) if (cycles - 20) % 40 == 0)
 
 
 def part2(input: str) -> str:
