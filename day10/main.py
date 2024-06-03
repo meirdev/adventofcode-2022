@@ -65,17 +65,15 @@ def part1(input: str) -> int:
 
 
 def part2(input: str) -> str:
-    ticks = itertools.count(40, 40)
-
-    output, column, tick = "", 0, next(ticks)
+    output, column = "", 0
 
     for cycles, x in run(input):
         output += "#" if x - 1 <= column <= x + 1 else "."
         column += 1
 
-        if cycles == tick:
+        if cycles % 40 == 0:
             output += "\n"
-            column, tick = 0, next(ticks)
+            column = 0
 
     return output.strip()
 
