@@ -8,12 +8,14 @@ readme = "README.md"
 [tool.poetry.dependencies]
 python = "^3.12"
 more-itertools = "^10.2.0"
+networkx = {extras = ["default"], version = "^3.3"}
 
 
 [tool.poetry.group.dev.dependencies]
 pytest = "^8.2.1"
 mypy = "^1.10.0"
 black = "^24.4.2"
+types-networkx = "^3.2.1.20240531"
 
 [build-system]
 requires = ["poetry-core"]
