@@ -9,6 +9,7 @@ readme = "README.md"
 python = "^3.12"
 more-itertools = "^10.2.0"
 networkx = {extras = ["default"], version = "^3.3"}
+shapely = "^2.0.4"
 
 
 [tool.poetry.group.dev.dependencies]
