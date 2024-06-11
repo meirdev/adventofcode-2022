@@ -20,11 +20,11 @@ Sensor at x=20, y=1: closest beacon is at x=15, y=3
 
 
 def test_part1():
-    assert part1(INPUT) == 26
+    assert part1(INPUT, 10) == 26
 
 
 def test_part2():
-    assert part2(INPUT) == 56000011
+    assert part2(INPUT, 20) == 56000011
 
 
 def test_input():
